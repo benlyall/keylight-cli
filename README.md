@@ -1,6 +1,8 @@
 # keylight-cli
 
-A Python CLI module designed to control the [Elgato](https://www.elgato.com/en) brand Lights. Use this when you want a simple command line to control your keylight. Currently only tested with a Keylight Air
+A Python CLI module designed to control the [Elgato](https://www.elgato.com/en) brand Lights. Use this when you want a simple command line to control your keylight. Currently only tested with a Keylight Air.
+
+This was originally created for my purposes, allowing me to control a Keylight Air using a Stream Deck under Linux (using the python [streamdeck-ui](https://pypi.org/project/streamdeck-ui/) module)
 
 ## Dependencies
 This uses the excellent [leglight](https://gitlab.com/obviate.io/pyleglight) python module, and wraps it in a very simple CLI tool.
