@@ -3,6 +3,13 @@ name = "keylight-cli"
 version = "0.1.0"
 description = ""
 authors = ["Ben Lyall <ben@lyall.me>"]
+keywords = ["elgato", "keylight", "leglight"]
+license = "MIT"
+repository = "https://github.com/benlyall/keylight-cli"
+homepage = "https://github.com/benlyall/keylight-cli"
+classifiers = [
+    "Topic :: Utilities"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
