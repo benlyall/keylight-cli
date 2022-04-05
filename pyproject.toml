@@ -5,6 +5,7 @@ description = "A Python based CLI to control Elgato Keylights"
 authors = ["Ben Lyall <ben@lyall.me>"]
 keywords = ["elgato", "keylight", "leglight"]
 license = "MIT"
+readme = "README.md"
 repository = "https://github.com/benlyall/keylight-cli"
 homepage = "https://github.com/benlyall/keylight-cli"
 classifiers = [
