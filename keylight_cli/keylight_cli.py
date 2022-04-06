@@ -22,8 +22,20 @@ def get_keylight(serial, timeout):
 
 
 @click.group()
-@click.option("-s", "--serial", required=False, default=None, help="Serial number of the light to operate on")
-@click.option("-t", "--timeout", default=2, type=int, help="The network timeout when discovering the lights")
+@click.option(
+    "-s",
+    "--serial",
+    required=False,
+    default=None,
+    help="Serial number of the light to operate on",
+)
+@click.option(
+    "-t",
+    "--timeout",
+    default=2,
+    type=int,
+    help="The network timeout when discovering the lights",
+)
 @click.pass_context
 def keylight(ctx, serial, timeout):
     """A simple CLI to control Elgato Keylights"""
@@ -57,6 +69,19 @@ def off(ctx):
     """Turn off a single keylight"""
     click.echo(f"Turning off {ctx.obj['light'].serialNumber}")
     ctx.obj["light"].off()
+
+
+@keylight.command(short_help="Toggle a keylight")
+@click.pass_context
+def toggle(ctx):
+    """Toggle a single keylight"""
+    click.echo(
+        f"Toggling {ctx.obj['light'].serialNumber} to {'Off' if ctx.obj['light'].isOn else 'On'}"
+    )
+    if ctx.obj["light"].isOn:
+        ctx.obj["light"].off()
+    else:
+        ctx.obj["light"].on()
 
 
 @keylight.command(short_help="Set the brightness")
