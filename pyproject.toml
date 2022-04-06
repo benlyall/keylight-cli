@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "keylight-cli"
-version = "0.1.2"
+version = "0.1.3"
 description = "A Python based CLI to control Elgato Keylights"
 authors = ["Ben Lyall <ben@lyall.me>"]
 keywords = ["elgato", "keylight", "leglight"]
